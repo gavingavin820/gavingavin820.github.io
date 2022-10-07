@@ -3,17 +3,54 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+<style type="text/css">
+#menu{
+width: 100%;
+height: 100px;
+background-color:lightpink;
+}	
+
+body{margin: 0px;}
+
+.button{
+	width:33% ;
+	height: 100px;
+	display: inline-block;
+	font-family: courier;
+	font-size: 50px;
+	text-align: center;
+	transition:3s;
+}
+
+.button:hover{
+	transition: 3s;
+	background-color:violet;
+
+}
+
+#box{
+	width: 100%;
+	height: 5000px;
+	background-image: url(http://25.media.tumblr.com/tumblr_meg4n0SJpx1rioxyio1_500.gif);
+} 
+
+</style>
 </head>
 <body>
-<a href="projects.html">
-	Projects.
+<div id="menu">
+	<a href="projects.html">
+	<div class="button">projects</div>
 </a>
 
-<br>
+
 
 <a href="journal.html">
-	Journal.
+	<div class="button">journal</div>
 </a>
+
+<div class="button">about me</div>	
+
+</div>
+<div id="box"></div>
 </body>
 </html>
