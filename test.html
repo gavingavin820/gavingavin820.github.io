@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	#box {
+		height: 200px;
+		width: 200px;
+		background-color: white;
+		position: absolute;
+	
+		background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQShqaDkefDztSMGCqhDJLIIer3qWZe-1O1hg&usqp=CAU);
+		background-size: contain;
+
+
+	}
+#question {
+
+	height: 100px;
+	width: 1500px;
+
+}
+
+</style>	
+
+</head>
+<body>
+<div id="box">
+
+</div>
+<div id="question">
+	<center><h1>Where is my cursor?</h1></center>
+</div>
+
+<script type="text/javascript">
+	
+document.addEventListener(
+"click", 
+function (event) {
+	console.log(event.clientX, event.clientY)
+box.style.left = 
+event.clientX + "px"
+box.style.top = 
+event.clientY + "px" 
+})
+
+</script>	
+</body>
+</html>
