@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<style type="text/css"></style>
+</head>
+<body>
+<center><h1>Click For Sound!</h1></center> 
+<div id=gavin></div>
+<audio src="song.mp3" id="song"></audio>
+<script type="text/javascript">
+let counter = 0;
+
+document.addEventListener(
+	"click", function(){
+		counter = counter + 1
+		console.log(counter)
+
+		if(counter%2 == 0){
+			song.play()
+		}
+		if(counter%2 == 1){song.pause()
+	}
+	})	
+
+
+</script>
+</body>
+</html>
