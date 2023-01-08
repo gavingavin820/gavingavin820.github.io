@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	
+	#square{
+		height: 200px;
+		width: 200px;
+		background-size:cover;
+	}
+</style>	
+</head>
+<body>
+<div id='square'></div>
+<script type="text/javascript">
+	function changeImage(){
+	var counter = Math.round(Math.random()*4);
+	square.style.backgroundImage = 'url('+ counter+'.png)';
+	console.log(counter)
+
+}
+
+
+	square.addEventListener('click', function(){
+		setInterval(changeImage, 500)
+}
+)
+</script>
+</body>
+</html>
