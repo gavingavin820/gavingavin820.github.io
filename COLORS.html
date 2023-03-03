@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	body{
+		background-color: rgb(100, 0, 100);
+	}
+	/*img{
+		filter:hue-rotate(50deg);
+	}*/
+</style>
+</head>
+<body>
+
+	<img id="image" src="https://t4.ftcdn.net/jpg/05/23/82/37/360_F_523823772_rENIlsWUhzgdojXgODNZZd9WtiQokv72.jpg">
+<script type="text/javascript">
+	document.addEventListener("mousemove", function(placeholder){
+		console.log(placeholder.clientX, placeholder.clientY)
+		document.body.style.backgroundColor = "rgb(0," + placeholder.clientX +"," + placeholder.clientY +")";
+
+		image.style.filter = "hue-rotate("+placeholder.clientX+"deg)"
+
+
+	})
+</script>
+</body>
+</html>

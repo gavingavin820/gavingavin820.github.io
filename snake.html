@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #game {
+        width: 400px;
+        height: 300px;
+        border: 1px solid black;
+        position: relative;
+      }
+      #paddleA, #paddleB {
+        width: 10px;
+        height: 50px;
+        position: absolute;
+        background-color: black;
+      }
+      #ball {
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        position: absolute;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pong Game</h1>
+    <div id="game">
+      <div id="paddleA"></div>
+      <div id="paddleB"></div>
+      <div id="ball"></div>
+    </div>
+    <script type="text/javascript">const game = document.getElementById("game");
+const paddleA = document.getElementById("paddleA");
+const paddleB = document.getElementById("paddleB");
+const ball = document.getElementById("ball");
+
+// Set the initial position of the paddles and ball
+paddleA.style.top = (game.offsetHeight - paddleA.offsetHeight) / 2 + "px";
+paddleB.style.top = (game.offsetHeight - paddleB.offsetHeight) / 2 + "px";
+paddleB.style.left = game.offsetWidth - paddleB.offsetWidth + "px";
+ball.style.left = (game.offsetWidth - ball.offsetWidth) / 2 + "px";
+ball.style.top = (game.offsetHeight - ball.offsetHeight) / 2 + "px";
+
+// Set the initial speed and direction of the ball
+let speedX = 5;
+let speedY = 5;
+
+// Start the game loop
+setInterval(gameLoop, 50);
+
+function gameLoop() {
+  // Move the ball
+  let x = ball.offsetLeft + speedX;
+  let y = ball.offsetTop + speedY;
+  ball.style.left = x + "px";
+  ball.style.top = y + "px";
+
+  // Check for collision with the walls
+  if (x + ball.offsetWidth > game.offsetWidth || x < 0) {
+    speedX = -speedX;
+  }
+  if (y + ball.offset
+</script>
+  </body>
+</html>

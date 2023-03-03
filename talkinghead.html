@@ -4,17 +4,19 @@
 <style type="text/css">
 	
 	#square{
-		height: 200px;
-		width: 200px;
+		height: 1000px;
+		width: 1000px;
 		background-size:cover;
+		border: .5px solid black;
+
 	}
 </style>	
 </head>
 <body>
-<div id='square'></div>
+<center><div id='square'></div></center>
 <script type="text/javascript">
 	function changeImage(){
-	var counter = Math.round(Math.random()*4);
+	var counter = Math.ceil(Math.random()*4);
 	square.style.backgroundImage = 'url('+ counter+'.png)';
 	console.log(counter)
 

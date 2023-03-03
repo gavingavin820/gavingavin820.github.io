@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	.cookies{
+		width: 100px;
+		height: 100px;
+		background-color:lightblue;
+		display: inline-block;
+		margin: 5px;
+		background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXluZDurO4IYu5MIgPQXF-BjyrK8fUY2Ut6w&usqp=CAU);
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+	
+	function makeCookie (placeholder){
+		var cookie = document.createElement("div");
+		document.body.appendChild(cookie);
+		cookie.classList.add('cookies')
+		cookie.innerText = placeholder;
+
+	}
+
+for(var i=0; i<1001; i=i+1){makeCookie(i)}
+</script>
+</body>
+</html>

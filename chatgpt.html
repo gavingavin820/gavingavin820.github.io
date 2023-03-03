@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+<script type="text/javascript">
+	var turn = 'X';
+var grid = [  ['', '', ''],
+  ['', '', ''],
+  ['', '', '']
+];
+
+function checkForWin() {
+  for (var i = 0; i < 3; i++) {
+    if (grid[i][0] === turn && grid[i][1] === turn && grid[i][2] === turn) {
+      return true;
+    }
+    if (grid[0][i] === turn && grid[1][i] === turn && grid[2][i] === turn) {
+      return true;
+    }
+  }
+  if (grid[0][0] === turn && grid[1][1] === turn && grid[2][2] === turn) {
+    return true;
+  }
+  if (grid[2][0] === turn && grid[1][1] === turn && grid[0][2] === turn) {
+    return true;
+  }
+  return false;
+}
+
+function playTurn(x, y) {
+  if (grid[x][y] !== '') {
+    return false;
+  }
+  grid[x][y] = turn;
+  if (checkForWin()) {
+    console.log(turn + ' wins!');
+  } else {
+    turn = (turn === 'X') ? 'O' : 'X';
+  }
+  return true;
+}
+
+</script>
+</body>
+</html>
