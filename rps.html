@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	.square{
+		width: 200px;
+		height: 200px;
+		background-color: white;
+		font-size:200px;
+	}
+
+</style>
+</head>
+<body>
+	<div class="square" id="box"></div>
+	<div class="square" id="box2"></div>
+<script type="text/javascript">
+	var game =["📃","✂️","🪨"]
+	document.addEventListener("click", function()
+		{
+			var random = Math.round(Math.random()*2)
+			var random2 = Math.round(Math.random()*2)
+	console.log(game[random])
+	box.innerText = game[random]
+	box2.innerText = game[random2]
+ function ifs (){
+	if(game[random] == "📃" && game[random2] == "✂️"){
+		alert("player 2 wins!")
+	}
+	if(game[random] == "✂️" && game[random2] == "🪨"){
+		alert("player 2 wins!")
+	}
+	if(game[random] == "🪨" && game[random2] == "📃"){
+		alert("player 2 wins!")
+	}
+		if(game[random] == "✂️" && game[random2] == "📃"){
+		alert("player 1 wins!")
+	}
+	if(game[random] == "🪨" && game[random2] == "✂️"){
+		alert("player 1 wins!")
+	}
+	if(game[random] == "📃" && game[random2] == "🪨"){
+		alert("player 1 wins!")
+	}
+	if(random == random2){
+		alert("tie!")
+	}
+
+	}
+
+	setTimeout(ifs, 1000)
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.rainbows{
+			margin: auto;
+			height:700px;
+			width:700px;
+			border-radius: 700px;
+		
+		}
+		#rainbow{
+			background-color:skyblue;
+		}
+		#rainbow2{
+			background-color:green;
+		}
+		#numbers{
+
+			
+		}
+		#rainbow1{
+			font-size: 60px;
+			justify-content: center;
+		}
+	</style>
+</head>
+<body>
+<div id="rainbow1" class="rainbows"></div>
+<div id="numbers"></div>
+<script type="text/javascript">
+var x = 1
+
+	function colorchange(){
+		if (x==1){
+			var r =Math.round(Math.random()*255)
+			var g =Math.round(Math.random()*255)
+			var b =Math.round(Math.random()*255)
+			rainbow1.style.backgroundColor = "rgb("+r+","+g+","+b+")"
+			rainbow1.innerText=r +", "+ g +", "+ b
+	}}
+
+setInterval(colorchange, 1000) 
+
+document.addEventListener('click',function(){
+	console.log("clicked")
+	if (x==0){
+		x=1
+	}
+	else{
+		x=0
+	}
+
+ 	
+})
+
+</script>
+</body>
+</html>

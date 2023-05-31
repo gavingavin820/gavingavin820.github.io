@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	#input{
+		height: 300px;
+		width: 300px;
+		position:relative;
+		top:100px;
+
+	}
+
+	#button{
+
+		height: 100px;
+		width: 100px;
+		position:relative;
+	
+
+	}
+</style>
+</head>
+<body>
+	<center>
+		<input id="input"></input>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br>
+	<button id="button">submit</button>
+
+</center>
+
+<audio src="alarm.wav" id="alarm"></audio>
+<script type="text/javascript">
+	
+button.addEventListener("click", function() {
+  var time = input.value * 60;
+
+  function countdown() {
+    time = time - 1;
+    console.log(time);
+    if (time == 0) {
+    	alarm.play();
+      alert("Wake Up!!!");
+     
+    }
+  }
+
+  document.addEventListener("click", function() {
+    alarm.pause();
+  });
+
+  setInterval(countdown, 1000);
+});
+
+
+</script>
+</body>
+</html>
